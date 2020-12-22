@@ -1,0 +1,15 @@
+export enum Units{
+  unit = "unit",
+  kg = "kg",
+  mg = "mg",
+  g = "g",
+  l = "l",
+  ml = "ml",
+  teaspoon = "teaspoon",
+  tablespoon = "tablespoon",
+  cup = "cup",
+  pint = "pint",
+  quint = "quint",
+  gallon = "gallon",
+  dozen = "dozen",
+}

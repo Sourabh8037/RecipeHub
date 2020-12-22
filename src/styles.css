@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+.background{
+  background-color: rgba(0,0,0,0.1);
+  backdrop-filter: blur(4px);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.main-background{
+  background: url('./assets/images/background.jpg') center center/cover no-repeat;
+  min-height: 98vh;
+  width: 100vw;
+  color: white;
+  border-radius: 0;
+}
+
+.list-item-background{ 
+  background-color: rgba(0,0,0,0.1) !important;
+  /* margin: 0.5rem auto; */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+  width: 100%;
+}

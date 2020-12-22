@@ -1,0 +1,56 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col col-sm-6 offset-sm-3 background">
+      <div 
+      class="spinner-border text-center text-secondary my-5" 
+      style="width: 3rem; height: 3rem;" 
+      role="status"
+      *ngIf="isLoading"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+      <app-alert *ngIf="error" [message]="error"></app-alert>
+      <form #authForm="ngForm" *ngIf="!isLoading" (ngSubmit)="onSubmit(authForm)">
+        <div class="form-group">
+          <label class="h5" for="email">Email</label>
+          <input 
+          type="email" 
+          class="form-control"
+          ngModel
+          name="email"
+          required
+          email
+          >
+        </div>
+        <div class="form-group">
+          <label class="h5" for="password">Password</label>
+          <input 
+          type="password" 
+          class="form-control"
+          ngModel
+          name="password"
+          required
+          minlength="6"
+          >
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <button 
+            type="submit"
+            class="btn btn-primary w-100 h-100 my-1"
+            [disabled]="!authForm.valid"
+            >
+           {{isLogin ? 'Login' : 'SignUp'}}</button>
+          </div>
+          <div class="col-12 col-md-6">
+            <button 
+            type="button"
+            class="btn btn-primary w-100 h-100 my-1"
+            (click)="onSwitchMode()"
+            >Switch to {{isLogin ? 'SignUp' : 'Login'}}</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
